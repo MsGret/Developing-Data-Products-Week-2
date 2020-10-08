@@ -1,0 +1,21 @@
+## My First Map
+
+```{r}
+Sys.Date()
+```
+
+```{r, echo=FALSE}
+library(leaflet)
+sfeduIcon <- makeIcon(
+    iconUrl = "https://sfedu.ru/www2/web/img/new_design_2020/logo.png",
+    iconWidth = 34)
+
+sfeduSite <- "<a href = 'https://sfedu.ru/index_eng.php'>My Alma Mater</a>"
+
+my_map <- leaflet() %>%
+    addTiles() %>%
+    addMarkers(lng = 39.728305, lat = 47.224801, popup = sfeduSite,
+               icon = sfeduIcon)
+my_map
+```
+
